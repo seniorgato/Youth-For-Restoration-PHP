@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /*
    Created on : Feb 24, 2015, 8:34:34 PM
-   Author     : Aston
+   Author     : Erik
 */
 .text{
     color: #ffffff;
@@ -18,6 +18,37 @@ and open the template in the editor.
     padding-left: .5em;
     padding-right: .5em;
 }
+
+img#facebook{
+    position: relative;
+    width: 3em;
+    height: 3em;
+    float: right;
+    top: -4em;
+    right: 9em;
+}
+
+
+
+img#twitter{
+    position: relative;
+    width: 3.3em;
+    height: 3.4em;
+    float: right;
+    top: -4.2em;
+    right: 2em;
+}
+
+img#blogspot{
+    position: relative;
+    width: 3em;
+    height: 3em;
+    float: right;
+    top: -4em;
+    right: -5em;
+
+}
+
 
 .container{
     background-color: rgba(0, 0, 0, 0.52);
@@ -89,9 +120,15 @@ div#contentwrapper{
     clear: both;
 }
 
-img#Logo{
+img#logo{
     position: relative;
     float: right;
     top: -6em;
     height: 6.3em;
+
+}
+img#paypal {
+    position: relative;
+    height: 3em;
+    padding-left: 4em;
 }

@@ -34,24 +34,30 @@
 <body id="body">
 
 <div id="contentwrapper">
-    <div id="navbarspace" ></div>
+    <div id="navbarspace"></div>
     <div id="navbar" class="container">
-        <ul id="menubar" >
-
-            <li class="nav-item" onclick=home()>Home</li>
-            <li class="nav-item" onclick=aboutpage()>About Us</li>
-            <li class="nav-item" onclick="projectpage()">Projects</li>
-            <li class="nav-item" onclick="newspage()">News</li>
-            <li class="nav-item" onclick="contactpage()">Contact</li>
-            <li class="nav-item" onclick="donatepage()">Donate</li>
-
+        <ul id="menubar">
+            <?php
+            $navBarName = array("Home", "About Us", "Projects", "News", "Contact", "Donate");
+            $navbarFunction = array("home()", "aboutpage()", "projectpage()", "newspage()", "contactpage()", "donatepage()");
+            for($i = 0; $i < count($navBarName); $i++){
+                echo "<li class=\"nav-item\"' onclick=".$navbarFunction[$i].">".$navBarName[$i]."</li>";
+            }
+            ?>
         </ul>
 
+        <img id="logo" src="http://youthforrestoration.org/uploads/3/5/9/5/3595510/764724.png"/>
 
-
-            <img id="Logo" src = "http://youthforrestoration.org/uploads/3/5/9/5/3595510/764724.png">
-
-        </div>
+        <a href="https://www.facebook.com/youthforrestoration" target="_blank">
+            <img id="facebook" src = "https://www.facebook.com/images/fb_icon_325x325.png"/>
+            </a>
+        <a href="https://twitter.com/Y_F_R_" target="_blank">
+            <img id="twitter" src = "http://www.buggytours.nl/img/Twitterbutton.png"/>
+            </a>
+\        <a href="http://youthforrestoration.blogspot.com/" target="_blank">
+            <img id="blogspot" src = "http://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Blogger-icon.png"/>
+            </a>
+\    </div>
 
     <div id="body-wrapper-home">
         <div id="homepagespace"></div>
@@ -86,11 +92,12 @@
                         </ul>
                         <h2 class="text">Board Members</h2>
                         <ul class="info">
-                            <li class="text font">Eric Layden</li>
-                            <li class="text font">Lauren Macdonald</li>
-                            <li class="text font">Lauren Neville</li>
-                            <li class="text font">​Jordon Scocozza​</li>
-                            <li class="text font">Christian Soto</li>
+                            <?php
+                            $names = array("Eric Layden", "Lauren Macdonald", "Lauren Neville", "Jordan Scocozza", "Christian Soto");
+                            foreach($names as $name){
+                                echo "<li class=\"text font\">{$name}</li>";
+                            }
+                            ?>
                         </ul>
                     </div>
                 </td>
@@ -105,44 +112,28 @@
         <div id="projectoverview" class="container">
             <table id="projecttable">
                 <tbody>
-                <tr class="projecttablerow">
-                    <td class="projecttabletext">
-                        <div class="sc-content-editable11">
-                        <p class="text">Patent Model Museum, 2015</p>
-                        </div>
-                    </td>
-                    <td>
-                        <img class="projecttableimg" src="http://www.patentmodel.org/images/models/228125.jpg"/>
-                    </td>
-                </tr>
-                <tr class="projecttablerow">
-                    <td class="projecttabletext">
-                        <div class="sc-content-editable13">
-                        <p class="text">Artifacts at the Beekman Mill House, 2014</p>
-                        </div>
-                    </td>
-                    <td>
-                        <img class="projecttableimg" src="https://scontent-lga.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/1937459_366732940141331_8626747291356556578_n.jpg?oh=a2fed382d8c061826a55f0532b01e41c&oe=55AE4CC6"/>
-                    </td>
-                </tr>
-                <tr class="projecttablerow">
-                    <td class="projecttabletext">
-                        <div class="sc-content-editable15">
-                        <p class="text">Beekman Mill House, 2014</p>
-                        </div>
-                    </td>
-                    <td>
-                        <img class="projecttableimg" src="https://scontent-lga.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10482454_360153134132645_2278158058168730969_n.jpg?oh=a4b8dbcee7957aeb59b54196d991af5e&oe=55BC070B"/>
-                    </td>
-                </tr>
-                <tr class="projecttablerow">
-                    <td class="projecttabletext">
-                        <p class="text">Apouquague Friends Burial Ground, 2012</p>
-                    </td>
-                    <td>
-                        <img class="projecttableimg" src="http://1.bp.blogspot.com/-n6hVccqAzDs/UsmwJyBvtjI/AAAAAAAAACM/6jfHL-Mul-8/s640/Cemetery+Newspaper.jpeg"/>
-                    </td>
-                </tr>
+                <?php
+                $projectLabel1 = "Patent Model Museum, 2015";
+                $projectLabel2 = "Artifacts at the Beekman Mill House, 2014";
+                $projectLabel3 = "Beekman Mill House, 2014";
+                $projectLabel4 = "Apouquague Friends Burial Ground, 2012";
+                $projectImgURL1 = "http://www.patentmodel.org/images/models/228125.jpg";
+                $projectImgURL2 = "https://scontent-lga.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/1937459_366732940141331_8626747291356556578_n.jpg?oh=a2fed382d8c061826a55f0532b01e41c&oe=55AE4CC6";
+                $projectImgURL3 = "https://scontent-lga.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10482454_360153134132645_2278158058168730969_n.jpg?oh=a4b8dbcee7957aeb59b54196d991af5e&oe=55BC070B";
+                $projectImgURL4 = "http://1.bp.blogspot.com/-n6hVccqAzDs/UsmwJyBvtjI/AAAAAAAAACM/6jfHL-Mul-8/s640/Cemetery+Newspaper.jpeg";
+                $projectLabels = array($projectLabel1, $projectLabel2, $projectLabel3, $projectLabel4);
+                $projectImgURLs = array($projectImgURL1, $projectImgURL2, $projectImgURL3, $projectImgURL4);
+                for($i = 0; $i < count($projectLabels); $i++){
+                    echo "<tr class=\"projecttablerow\">";
+                    echo "<td class=\"projecttabletext\">";
+                    echo "<div class=\"sc-content-editable1{$i}\">";
+                    echo "<p class=\"text\">{$projectLabels[$i]}</p>";
+                    echo "</div>";
+                    echo "</td>";
+                    echo "<td><img class=\"projecttableimg\" src=\"{$projectImgURLs[$i]}\"/></td>";
+                    echo "</tr>";
+                }
+                ?>
                 </tbody>
             </table>
         </div>
@@ -183,8 +174,8 @@
 
     <div id="body-wrapper-contact">
         <div class="sc-content-editable6">
-        <h1 class="text" id="contactpageinfo">Please feel free to reach out to us using this form. If you would like to get involved, we welcome ​
-            volunteers. Your support is invaluable in helping us preserve our history!​</h1>
+            <h1 class="text" id="contactpageinfo">Please feel free to reach out to us using this form. If you would like to get involved, we welcome ​
+                volunteers. Your support is invaluable in helping us preserve our history!​</h1>
         </div>
 
         <form name="contactform" method="post" action="send_form_email.php" class="container">
@@ -238,7 +229,6 @@
         </form>
         <br/>
     </div>
-
     <div id="body-wrapper-donate">
         <table>
             <tbody>
@@ -252,6 +242,8 @@
                         <p class="text donatetext">Here is how you can lend your support:</p>
                         <h1 class="text donateheader">Donate Online</h1>
                         <p class="text donatetext">Click here to donate using PayPal</p>
+                        <img id="paypal" src="http://4.bp.blogspot.com/-8NxMg3Tm-tY/U4wEqN1ukyI/AAAAAAAACOo/yOe3YBweYAE/s1600/paypal+donate.png"/>
+
                         <h1 class="text donateheader">Donate by Mail</h1>
                         <p class="text donatetext">Mail your contribution check, payable to “Youth For Restoration” to:</p>
                         <p class="text donatetext">Youth For Restoration<br>​
@@ -277,15 +269,11 @@
             </tbody>
         </table>
     </div>
-
     <div class="clearfooter"></div>
-
 </div>
-
-
 <div id="bottombar" class="container">
     <a href="https://www.facebook.com/youthforrestoration" target="_blank">
-        <img class="thumbnail sc-content-editable10" src = "https://www.facebook.com/images/fb_icon_325x325.png" />
+        <img class="thumbnail" sc-content-editable10" src = "https://www.facebook.com/images/fb_icon_325x325.png" />
     </a>
     <a href="https://twitter.com/Y_F_R_" target="_blank">
         <img class="thumbnail" src = "http://www.buggytours.nl/img/Twitterbutton.png" />
@@ -297,4 +285,3 @@
 </div>
 </body>
 </html>
-
